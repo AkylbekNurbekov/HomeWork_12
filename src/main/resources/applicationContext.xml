@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="myAnimal"
+          class="com.example.homework_12.Dog">
+        <property name="name" value="Sharik"/>
+        <property name="color" value="black"/>
+    </bean>
+    <bean id = "myAnimal2"
+          class="com.example.homework_12.Dog">
+        <property name="name" value="Laki"/>
+        <property name="color" value="white"/>
+    </bean>
+    <bean id="myPerson"
+          class="com.example.homework_12.Person">
+        <property name="name" value="Akylbek"/>
+        <property name="age" value="20"/>
+        <property name="animal" ref="myAnimal"/>
+    </bean>
+    <bean id = "myPerson2"
+          class="com.example.homework_12.Person">
+        <property name="name" value="Hadicha"/>
+        <property name="age" value="18"/>
+        <property name="animal" ref="myAnimal2"/>
+    </bean>
+
+</beans>
